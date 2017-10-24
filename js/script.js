@@ -7,7 +7,7 @@ $(document).ready(function() {
   $('.flex-control-nav li a').text('');
   $('.photos>div').click(function() {
     var name = $(this).find('.image').attr('alt');
-    $('.show-fon').show('slow');
+    $('.show-fon').show('fast');
     $('html, body').css('overflow', 'hidden');
     $('.show-fon').append('<img src="photos/'+name+'-pr.jpg" class="image-lg">');
     console.log(name);
@@ -17,7 +17,7 @@ $(document).ready(function() {
     $(this).hide();
     $('html, body').css('overflow', 'auto');
   });
-  $('.hover-bg').append('<i class="fa fa-plus" aria-hidden="true"></i>');
+  $('.hover-bg').append('<i class="fa fa-plus center-block" aria-hidden="true"></i>');
   $("#menu").on("click","a", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),

@@ -23,15 +23,16 @@
 }
 .nav-click>ul>li{
   list-style: none;
-  width: 13px;
-  height: 13px;
+  width: 9px;
+  height: 9px;
   margin-bottom: 20px;
 }
 .nav-click>ul>li>a{
   display: block;
-  width: 13px;
-  height: 13px;
+  width: 9px;
+  height: 9px;
   background-image: url(img/nav-click.png);
+  background-size: cover;
 }
 .nav-click>ul>li:first-child>a{
   background-image: url(img/nav-click-active.png);
@@ -84,8 +85,12 @@ nav{
 }
 .menu>li{
   display: inline-block;
-  margin-left: 14%;
+  margin-left: 10%;
   text-align: center;
+  float: right;
+}
+.menu>li:first-child{
+  margin-right: 3%;
 }
 .menu>li>a{
   color: #f2f2f3;
@@ -111,7 +116,8 @@ nav{
   margin-left: 13%;
 }
 .social>a>img{
-  width: 90%;
+  width: 70%;
+  height: 16px;
 }
 
 /*-------- slider-top ---------*/
@@ -136,6 +142,7 @@ nav{
   background: -ms-linear-gradient(right, #d61a63, #8d1b55);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 135%
 }
 .slider-top .flex-nav-prev, .slider-top .flex-nav-next{
   display: none;
@@ -190,14 +197,14 @@ nav{
 .about-me{
   width: 100%;
   height: 120vh;
-  padding-top: 15vh;
+  padding-top: 5vh;
   position: relative;
   font-family: 'Open Sans', sans-serif;
 }
 .about-me-background>section{
   width: 21%;
   display: inline-block;
-  margin-left: 20%;
+  margin-left: 15%;
   line-height: 25px;
   margin-top: 15%;
 }
@@ -256,7 +263,7 @@ nav{
   background-image: url(img/bg-about-me.png);
   background-position: right;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 45%;
   top:0;
   right: 0;
 }
@@ -342,7 +349,6 @@ nav{
 
 .gallery{
   width: 100%;
-  height: 1650px;
   font-family: 'Open Sans', sans-serif;
   background-color: #f2f2f3;
   position: relative;
@@ -399,13 +405,19 @@ nav{
   z-index: 2;
   top: 0;
   display: none;
+  text-align: center;
+  vertical-align: middle;
 }
 .hover-bg>i{
   color: #e1e1e1;
   font-size: 500%;
-  display: block;
-  width: 20%;
-  margin: 120px auto ;
+  width: 80px;
+  margin-left: -9%;
+  vertical-align: middle;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .photos>div>img{
   width: 100%;
@@ -432,6 +444,13 @@ nav{
   margin: 0 auto;
 }
 
+/*-------------- fix-gallery ---------------*/
+
+.fix-gallery{
+  width: 100%;
+  height: 200px;
+}
+
 /*-------------- nav-click ---------------*/
 
 .gallery .nav-click{
@@ -444,8 +463,8 @@ nav{
 
 footer{
   width: 100%;
+  height: 100vh;
   margin: 0 auto;
-  height: 700px;
   background-image: url(img/footer.png);
   background-position: center;
   position: relative;
@@ -454,9 +473,9 @@ footer{
 }
 footer>h1{
   text-align: center;
-  font-size: 400%;
+  font-size: 500%;
   font-weight: bold;
-  padding-top: 200px;
+  padding-top: 31vh;
 }
 footer>h1>span, footer>p>span, .contacts>p>span{
   background: linear-gradient(right, #d61a63, #8d1b55);
@@ -468,7 +487,7 @@ footer>h1>span, footer>p>span, .contacts>p>span{
 }
 footer>a{
   display: block;
-  width: 25%;
+  width: 350px;
   height: 70px;
   padding-top: 10px;
   background-image: url(img/button-border.png);
@@ -500,16 +519,28 @@ footer>p{
   background-size: contain;
   background-repeat: no-repeat;
   float: left;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 .contacts{
-  width: 32%;
+  width: 35%;
   display: inline-block;
   float: right;
-  margin-right: 10%;
+  margin-right: 5%;
 }
-.contacts>a{
-  margin-right: 7%;
+.social-foot{
+  width: 50%;
+  float: right;
+}
+.social-foot>a{
+  float: left;
+  margin-left: 10%;
+}
+.social-foot>a:first-child{
+  margin-left: 35%;
+}
+.social-foot>a>img{
+  width: 70%;
+  height: 16px;
 }
 .contacts>p{
   display: inline-block;
