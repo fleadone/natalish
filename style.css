@@ -132,7 +132,7 @@ nav{
 .slider-top .slides>li>p{
   text-transform: uppercase;
   font-family: 'Open Sans', sans-serif;
-  font-size: 120%;
+  font-size: 130%;
   letter-spacing: 1px;
 }
 .slider-top .slides>li>p>span{
@@ -439,9 +439,14 @@ nav{
   cursor: pointer;
 }
 .image-lg{
-  width: 80%;
+  width: 60%;
   display: block;
   margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*-------------- fix-gallery ---------------*/
