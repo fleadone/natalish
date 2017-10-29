@@ -72,23 +72,27 @@ $(document).ready(function() {
   $('footer>a').on('click', function(event) {
     event.preventDefault();
     $('.show-form').show();
-    $.ajax({
-            url: "http://formspree.io/flead@yandex.ru",
-            method: "POST",
-            data: {
-                user: $('.user-name').val(),
-                email: $('.user-email').val(),
-                phone: $('.user-phone').val(),
-                text: $('.user-commit').val()
-            },
-            dataType: "json"}).done(function(e){
-              $('.show-form').hide();
-              e.preventDefault();
-
-            });
   });
   $('.close-form').on('click', function(event) {
     event.preventDefault();
     $('.show-form').hide();
+  });
+  $('.btn').on('click', function (event) {
+    event.preventDefault();
+    $.ajax({
+            url: "https://formspree.io/ishdesign.ln@gmail.com",
+            method: "POST",
+            data: {
+                name: $('.user-name').val(),
+                email: $('.user-email').val(),
+                number: $('.user-phone').val(),
+                text: $('.user-commit').val()
+            },
+            dataType: "json"}).done(function(e){
+                // $('#message').css('display','block');
+                // $('#form').css('display','none');
+                $('.show-form').hide();
+                e.preventDefault();
+            });
   })
 });
