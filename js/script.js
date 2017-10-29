@@ -9,15 +9,15 @@ $(document).ready(function() {
     var name = $(this).find('.image').attr('alt');
     $('.show-fon').show('fast');
     $('html, body').css('overflow', 'hidden');
-    $('.show-fon').append('<img src="photos/'+name+'-pr.jpg" class="image-lg">');
+    $('.show-fon>div').append('<img src="photos/'+name+'-pr.jpg" class="image-lg">');
     console.log(name);
   });
-  $('.show-fon').on('click', function() {
+  $('.close-photo').on('click', function() {
     $('.image-lg').remove();
-    $(this).hide();
+    $('.show-fon').hide();
     $('html, body').css('overflow', 'auto');
   });
-  $('.hover-bg').append('<i class="fa fa-plus center-block" aria-hidden="true"></i>');
+  $('.photos>div').append('<div class="hover-bg"> <div><div></div><div></div></div> </div>');
   $("#menu").on("click","a", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
@@ -65,4 +65,30 @@ $(document).ready(function() {
     },
     offset:100
   });
+  $('.about-me-background>section>a').on('click', function (event) {
+    event.preventDefault();
+    $('.click-text').slideToggle();
+  });
+  $('footer>a').on('click', function(event) {
+    event.preventDefault();
+    $('.show-form').show();
+    $.ajax({
+            url: "http://formspree.io/flead@yandex.ru",
+            method: "POST",
+            data: {
+                user: $('.user-name').val(),
+                email: $('.user-email').val(),
+                phone: $('.user-phone').val(),
+                text: $('.user-commit').val()
+            },
+            dataType: "json"}).done(function(e){
+              $('.show-form').hide();
+              e.preventDefault();
+
+            });
+  });
+  $('.close-form').on('click', function(event) {
+    event.preventDefault();
+    $('.show-form').hide();
+  })
 });
