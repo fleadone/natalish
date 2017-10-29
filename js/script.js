@@ -80,7 +80,7 @@ $(document).ready(function() {
   $('.btn').on('click', function (event) {
     event.preventDefault();
     $.ajax({
-            url: "https://formspree.io/flead@yandex.ru",
+            url: "https://formspree.io/ishdesign.ln@gmail.com",
             method: "POST",
             data: {
                 name: $('.user-name').val(),
