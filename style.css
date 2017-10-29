@@ -681,16 +681,46 @@ footer .nav-click{
 
 @media only screen and (max-width : 768px){
   .wrapper{
-    max-width: 750px;
+    width: 768px;
+    min-width: 320px;
+  }
+  .nav-click{
+    display: none;
   }
   header{
     height: 500px;
   }
+  nav{
+    width: 99%;
+    margin-left: 1%;
+  }
+  .menu{
+    width: 65%;
+  }
+  .menu>li{
+    margin-left: 5%;
+  }
+  .social{
+    width: 20%;
+  }
+  .slider-top .slides>li>p{
+    font-size: 100%;
+  }
+  .slider-top .slides>li{
+    margin: 30vh 0 0 -12px;
+  }
   .about-me{
-    height: 530px;
+    height: 730px;
   }
   .photo-natalis{
     width: 43%;
+  }
+  .photo-natalis>img{
+    height: 55.5%;
+    bottom: none;
+  }
+  .about-me-background{
+    background-position: 107% 100.5%;
   }
   .about-me-background>section{
     width: 47%;
@@ -714,15 +744,21 @@ footer .nav-click{
     height: 90px;
   }
   footer{
-    height: 500px;
+    height: 550px;
   }
   footer .nav-click{
     top: 220px;
   }
+  .contacts{
+    width: 55%;
+  }
+  .logo-footer{
+    width: 25%;
+  }
 }
 
 
-@media only screen and (max-width : 480px){
+/*@media only screen and (max-width : 480px){
   .wrapper{
     width: 480px;
   }
@@ -791,4 +827,4 @@ footer .nav-click{
   }
 
 
-}
+}*/
