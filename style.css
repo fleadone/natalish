@@ -122,6 +122,10 @@ nav{
 
 /*-------- slider-top ---------*/
 
+.top-mobile{
+  display: none;
+}
+
 .slider-top .slides{
   color: #e7e8e8;
   text-align: center;
@@ -273,6 +277,18 @@ nav{
   background-size: 50%;
   top:0;
   right: 0;
+}
+
+/*-------------- deko-about-gallery ---------------*/
+
+.deko-about-gallery{
+  width: 3px;
+  height: 291px;
+  background-image: url(img/deko-about-gallery.png);
+  position: absolute;
+  z-index: 2;
+  bottom: -146px;
+  left: 15%;
 }
 
 /*-------------- nav-click ---------------*/
@@ -490,6 +506,14 @@ nav{
   height: 200px;
 }
 
+/*-------------- deko-about-gallery ---------------*/
+
+.fix-gallery>.deko-about-gallery{
+  left: 50%;
+
+}
+
+
 /*-------------- nav-click ---------------*/
 
 .gallery .nav-click{
@@ -649,4 +673,122 @@ form>input, textarea{
 footer .nav-click{
   left: 94%;
   top: 300px;
+}
+
+
+
+/*======================== @media ==========================*/
+
+@media only screen and (max-width : 768px){
+  .wrapper{
+    max-width: 750px;
+  }
+  header{
+    height: 500px;
+  }
+  .about-me{
+    height: 530px;
+  }
+  .photo-natalis{
+    width: 43%;
+  }
+  .about-me-background>section{
+    width: 47%;
+    margin-top: 4%;
+    margin-left: 10%;
+  }
+  .about-me-background{
+    background-size: 35%;
+  }
+  .slider-bot{
+    height: 435px;
+  }
+  .deko-about-gallery{
+    height: 150px;
+    bottom: -74px;
+  }
+  .gallery section{
+    padding-top: 70px;
+  }
+  .fix-gallery{
+    height: 90px;
+  }
+  footer{
+    height: 500px;
+  }
+  footer .nav-click{
+    top: 220px;
+  }
+}
+
+
+@media only screen and (max-width : 480px){
+  .wrapper{
+    width: 480px;
+  }
+  header{
+    height: 700px;
+  }
+  .menu{
+    display: none;
+  }
+  .social{
+    display: none;
+  }
+  .nav-click{
+    display: none;
+  }
+  .slider-top>.flexslider{
+    display: none;
+  }
+  .top-mobile{
+    display: block;
+    width: 100%;
+    margin-top: 175px;
+    margin-bottom: 60px;
+    text-align: center;
+    color: #e7e8e8;
+    font-size: 200%;
+  }
+  .top-mobile>p{
+    font-family: 'Open Sans', sans-serif;
+  }
+  .top-mobile>p>span{
+    background: linear-gradient(right, #d61a63, #8d1b55);
+    background: -webkit-linear-gradient(right, #d61a63, #8d1b55);
+    background: -moz-linear-gradient(right, #d61a63, #8d1b55);
+    background: -ms-linear-gradient(right, #d61a63, #8d1b55);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 110%;
+    font-weight: 600;
+  }
+  .dekor>div{
+    height: 150px;
+  }
+  .about-me{
+    height: 820px;
+  }
+  .photo-natalis{
+    display: none;
+  }
+  .about-me-background{
+    background-image: none;
+  }
+  .about-me-background>section{
+    width: 80%;
+    line-height: 40px;
+  }
+  .about-me-background>section>div{
+    width: 20%;
+    margin-left: 70%;
+  }
+  .about-me-background>section>h2{
+    font-size: 350%;
+  }
+  .about-me-background>section>p{
+    font-size: 200%;
+  }
+
+
 }

@@ -90,7 +90,6 @@ $(document).ready(function() {
             },
             dataType: "json"}).done(function(event){
                 $('.show-form').hide();
-                event.preventDefault();
             });
   })
 });
