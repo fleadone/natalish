@@ -88,11 +88,9 @@ $(document).ready(function() {
                 number: $('.user-phone').val(),
                 text: $('.user-commit').val()
             },
-            dataType: "json"}).done(function(e){
-                // $('#message').css('display','block');
-                // $('#form').css('display','none');
+            dataType: "json"}).done(function(event){
                 $('.show-form').hide();
-                e.preventDefault();
+                event.preventDefault();
             });
   })
 });
