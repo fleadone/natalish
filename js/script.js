@@ -91,5 +91,18 @@ $(document).ready(function() {
             dataType: "json"}).done(function(event){
                 $('.show-form').hide();
             });
-  })
+  });
+  $('.mobile-menu-icon').on('click', function() {
+    $('.menu-fon').slideToggle();
+  });
+  $('.close-menu').on('click', function() {
+    $('.menu-fon').slideToggle();
+  });
+  $('.menu-fon').on('click', 'a', function(event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body, html').animate({scrollTop: top}, 1500);
+    $('.menu-fon').slideToggle();
+  });
 });
